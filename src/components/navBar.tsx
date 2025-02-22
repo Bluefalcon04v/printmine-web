@@ -16,15 +16,7 @@ const NavBar = () => {
   return (
     <div className='w-full flex justify-center py-3'>
       <div className='flex  justify-between w-8/12'>
-        {/* <Image alt='logo' src={Logo} width={200} height={400} className='w-20 h-20 object-fill'/> */}
-
-        <Image
-          loading="lazy"
-          src={Logo}
-          alt="nature image"
-          width={800}
-          height={600}
-        />
+        <Image alt='logo' src={Logo} width={200} height={200} className='w-20 h-20 object-fill aspect-square'/>
         <div className='flex gap-4 text-xs'>
           {["my pens", "key chains"].map((val, i) => (
             <div key={i} className='flex gap-1 font-semibold text-dark-gray cursor-pointer hover:text-blue-700'>
