@@ -1,5 +1,6 @@
 "use client";
 
+import BentoGrid from "@/components/bentoGrid";
 import DynamicCarousel from "@/components/carousel";
 import Image from "next/image";
 
@@ -73,6 +74,8 @@ export default function Home() {
         )}
       />
 
+<BentoGrid />
+
       <div className="my-32">
         <h3 className="text-center font-semibold text-4xl">Watch and Buy</h3>
         <div className="mt-8 grid grid-cols-6 place-items-center ">
@@ -122,5 +125,6 @@ export default function Home() {
         />
       </div>
     </div>
+
   );
 }
