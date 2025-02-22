@@ -3,6 +3,8 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import VpnKeyTwoToneIcon from '@mui/icons-material/VpnKeyTwoTone';
+import { Logo } from '../../public/image';
+import Image from 'next/image';
 import React from 'react'
 
 const NavBar = () => {
@@ -14,7 +16,7 @@ const NavBar = () => {
   return (
     <div className='w-full flex justify-center py-3'>
       <div className='flex  justify-between w-8/12'>
-        <div>Logo</div>
+        <Image alt='logo' src={Logo} width={200} height={200} className='w-20 h-20 object-fill aspect-square'/>
         <div className='flex gap-4 text-xs'>
           {["my pens", "key chains"].map((val, i) => (
             <div key={i} className='flex gap-1 font-semibold text-dark-gray cursor-pointer hover:text-blue-700'>
