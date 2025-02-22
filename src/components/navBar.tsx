@@ -1,34 +1,32 @@
-import ModeEditOutlineTwoToneIcon from '@mui/icons-material/ModeEditOutlineTwoTone';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import VpnKeyTwoToneIcon from '@mui/icons-material/VpnKeyTwoTone';
 import { Logo } from '../../public/image';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const NavBar = () => {
-  const icons = [
-    <ModeEditOutlineTwoToneIcon key={"icon1"} sx={{ fontSize: 20 }} />,
-    <VpnKeyTwoToneIcon key={"icon2"} sx={{ fontSize: 20 }} />,
+  const NAV_ITEMS = [
+    { name: "key chains", link: "/products/key-chains" },
+    { name: "magnetic badge", link: "/products/magnetic-badge" },
+    { name: "metal pen", link: "/products/metal-pen" },
+    { name: "mobile stand", link: "/products/mobile-stand" },
+    { name: "corporate gifts", link: "/products/corporate-gifts" },
   ];
 
   return (
-    <div className='w-full flex justify-center py-3'>
-      <div className='flex  justify-between w-8/12'>
-        <Image alt='logo' src={Logo} width={200} height={200} className='w-20 h-20 object-fill aspect-square'/>
+    <div className='top-0 z-50 fixed flex justify-center bg-white shadow py-1 border-b w-full'>
+      <div className='flex justify-between place-content-center place-items-center w-10/12'>
+        <Image alt='logo' src={Logo} width={200} height={200} className='w-20 h-16 object-fill aspect-square' />
         <div className='flex gap-4 text-xs'>
-          {["my pens", "key chains"].map((val, i) => (
-            <div key={i} className='flex gap-1 font-semibold text-dark-gray cursor-pointer hover:text-blue-700'>
-              {icons[i % icons.length]}
-              {val}
-            </div>
+          {NAV_ITEMS.map((val, i) => (
+            <Link href={val.link} key={i} className='flex gap-1 px-1 hover:text-neutral-600 capitalize hover:scale-105 active:scale-95 transition-all cursor-pointer'>
+              {val.name}
+            </Link>
           ))}
         </div>
-        <div className='flex gap-4'>
-          <SearchOutlinedIcon className='hover:text-black text-dark-gray cursor-pointer' />
-          <FavoriteBorderOutlinedIcon className='hover:text-black text-dark-gray cursor-pointer' />
-          <ShoppingCartOutlinedIcon className='hover:text-black text-dark-gray cursor-pointer' />
+        <div className='flex gap-4 text-xs'>
+          <p>Search</p>
+          <p>Like</p>
+          <p>Cart</p>
         </div>
       </div>
     </div>

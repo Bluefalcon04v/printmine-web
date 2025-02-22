@@ -1,8 +1,8 @@
 "use client";
-
 import BentoGrid from "@/components/bentoGrid";
 import DynamicCarousel from "@/components/carousel";
 import Image from "next/image";
+import CategoryNavBar from "../components/categoryNavBar";
 
 const sliderData = [
   "/magneticBadge.png",
@@ -56,6 +56,7 @@ const watchAndBuyData = [
 export default function Home() {
   return (
     <div className="w-full">
+      <CategoryNavBar/>
       <DynamicCarousel
         data={sliderData}
         breakpoints={1}
@@ -77,18 +78,18 @@ export default function Home() {
 <BentoGrid />
 
       <div className="my-32">
-        <h3 className="text-center font-semibold text-4xl">Watch and Buy</h3>
-        <div className="mt-8 grid grid-cols-6 place-items-center ">
+        <h3 className="font-semibold text-4xl text-center">Watch and Buy</h3>
+        <div className="place-items-center grid grid-cols-6 mt-8">
           {watchAndBuyData.map((datum, index) => (
-            <div key={index} className="border rounded-lg py-2 px-6">
+            <div key={index} className="px-6 py-2 border rounded-lg">
               <Image alt="data" src={datum.image} width={200} height={200} />
               <div>
-                <p className="text-xl font-medium">{datum.name}</p>
-                <div className="flex gap-1 items-end">
-                  <span className="text-lg font-semibold">
+                <p className="font-medium text-xl">{datum.name}</p>
+                <div className="flex items-end gap-1">
+                  <span className="font-semibold text-lg">
                     &#8377;{datum.sellingPrice}
                   </span>
-                  <span className="text-base text-gray-500 line-through">
+                  <span className="text-gray-500 text-base line-through">
                     &#8377;{datum.actualPrice}
                   </span>
                 </div>
@@ -99,23 +100,23 @@ export default function Home() {
       </div>
 
       <div>
-        <h3 className="text-center font-semibold text-4xl mb-10">
+        <h3 className="mb-10 font-semibold text-4xl text-center">
           Corporate gifting
         </h3>
         <DynamicCarousel
           data={watchAndBuyData}
           breakpoints={4}
           card={(datum: any) => (
-            <div className="border rounded-lg py-2 px-6">
+            <div className="px-6 py-2 border rounded-lg">
               <Image alt="data" src={datum.image} width={200} height={200} />
               <div>
-                <p className="text-xl font-medium">{datum.name}</p>
+                <p className="font-medium text-xl">{datum.name}</p>
                 <p className="text-2xl">&#8902; &#8902; &#8902; &#8902; &#8902; (5 rating)</p>
-                <div className="flex gap-1 items-end">
-                  <span className="text-lg font-semibold">
+                <div className="flex items-end gap-1">
+                  <span className="font-semibold text-lg">
                     &#8377;{datum.sellingPrice}
                   </span>
-                  <span className="text-base text-gray-500 line-through">
+                  <span className="text-gray-500 text-base line-through">
                     &#8377;{datum.actualPrice}
                   </span>
                 </div>
