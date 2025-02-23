@@ -44,3 +44,10 @@
     --foreground: #ededed;
   }
 } */
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  z-index: 100;
+  position: relative;
+  padding: 10px;
+}

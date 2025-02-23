@@ -11,14 +11,12 @@ import { LeftIcon, RightIcon } from "@public/icons";
 interface IProps {
   data: any[];
   card: any;
-  isCarouselIcons?: boolean;
   breakpoints?: any;
 }
 
 const DynamicCarousel = ({
   card,
   data,
-  isCarouselIcons = true,
   breakpoints,
 }: IProps) => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -43,31 +41,24 @@ const DynamicCarousel = ({
     }
   };
   return (
-    <div className="w-full relative">
-      {isCarouselIcons && (
-        <div className="flex  justify-between items-center gap-6 md:gap-4">
-          <div
-            onClick={goPrev}
-            className="absolute z-40 left-4  top-[40%] cursor-pointer w-40 active:scale-90 transition-all"
-          >
-            <LeftIcon />
-          </div>
-          <div
-            onClick={goNext}
-            className="absolute z-40 -right-20  top-[40%] cursor-pointer w-40 active:scale-90 transition-all"
-          >
-            <RightIcon />
-          </div>
-        </div>
-      )}
+    <div className="w-full relative flex place-content-center place-items-center">
+      <div
+        onClick={goPrev}
+        className=" z-40  place-items-center w-[5%] cursor-pointer  active:scale-90 transition-all"
+      >
+        <LeftIcon />
+      </div>
+
       <Swiper
         onSwiper={(swiper: any) => (swiperRef.current = swiper)}
         modules={[Navigation, Pagination, Autoplay]}
+        className="mySwiper w-[90%]"
         slidesPerView={breakpoints}
+        slidesPerGroup={breakpoints}
         // breakpoints={breakpoints}
-        spaceBetween={16}
+        spaceBetween={40}
         speed={800}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop
         pagination={{ clickable: true }}
       >
@@ -77,6 +68,13 @@ const DynamicCarousel = ({
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div
+        onClick={goNext}
+        className=" z-40  place-items-center w-[5%] cursor-pointer  active:scale-90 transition-all"
+      >
+        <RightIcon />
+      </div>
     </div>
   );
 };

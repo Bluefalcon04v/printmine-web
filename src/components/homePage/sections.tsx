@@ -1,5 +1,7 @@
-"use client"
+"use client";
 
+import { StarSvg } from "@public/icons";
+import { PenImage } from "@public/images";
 import Image from "next/image";
 import React from "react";
 import DynamicCarousel from "./carousel";
@@ -9,61 +11,61 @@ const sectionData = [
     name: "Corporate Gifting",
     list: [
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
@@ -74,61 +76,61 @@ const sectionData = [
     name: "Personalized Pens",
     list: [
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
@@ -139,61 +141,61 @@ const sectionData = [
     name: "Corporate Gift Sets",
     list: [
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
       },
       {
-        image: "/pen.jpg",
+        image: PenImage,
         name: "Premium Pen",
         sellingPrice: 200,
         actualPrice: 400,
@@ -212,16 +214,29 @@ const Sections = () => {
           </h3>
           <DynamicCarousel
             data={datum.list}
-            breakpoints={6}
+            breakpoints={5}
             card={(datum: any) => (
-              <div className="px-6 py-2 border rounded-lg">
-                <Image alt="data" src={datum.image} width={200} height={200} />
-                <div>
+              <div className="cursor-pointer ">
+                <div className="bg-neutral-100/80 rounded-t-lg">
+                  <Image
+                    alt="data"
+                    src={datum.image}
+                    width={200}
+                    height={200}
+                    className="mix-blend-multiply px-6 py-2 mx-auto"
+                  />
+                </div>
+                <div className="px-6 py-2 border-b border-neutral-200 border-x rounded-b-lg ">
                   <p className="font-medium text-xl">{datum.name}</p>
-                  <p className="text-2xl">
-                    &#8902; &#8902; &#8902; &#8902; &#8902; (5 rating)
+                  <p className=" flex ">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <StarSvg
+                        key={index}
+                        className={`w-4 h-4 ${"text-yellow-500 fill-yellow-500"}`}
+                      />
+                    ))}
                   </p>
-                  <div className="flex items-end gap-1">
+                  <div className="flex items-end gap-1 mt-3">
                     <span className="font-semibold text-lg">
                       &#8377;{datum.sellingPrice}
                     </span>

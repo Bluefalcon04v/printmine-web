@@ -5,8 +5,8 @@ const Category3 = "/images/category3.png";
 const Category4 = "/images/category4.png";
 const Category5 = "/images/category5.png";
 const Category6 = "/images/category6.png";
-const KeychainImage = "/images/keychain.png";
-const MagneticBadgeImage = "/images/magneticBadge.png";
+const CoverImage1 = "/images/coverImage1.png";
+const CoverImage2 = "/images/coverImage2.png";
 const PenImage = "/images/pen.png";
 const SampleImage = "/images/sampleImage.png";
 const ReviewKeyChain = "/images/reviewKeyChain.png";
@@ -21,8 +21,8 @@ export {
   ReviewKeyChain,
   SampleImage,
   PenImage,
-  MagneticBadgeImage,
-  KeychainImage,
+  CoverImage2,
+  CoverImage1,
   Logo,
   Category1,
   Category2,

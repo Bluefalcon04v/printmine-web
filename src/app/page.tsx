@@ -11,7 +11,7 @@ import WatchAndBuy from "@components/homePage/watchAndBuy";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-10 mt-7">
       <CategoryNavBar />
       <HomeSlider />
       <div className="w-11/12 mx-auto">
