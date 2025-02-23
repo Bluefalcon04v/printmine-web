@@ -1,7 +1,6 @@
 import React from 'react'
 import StarSvg from '../../../../../public/svg/starSvg'
 import FireSvg from '../../../../../public/svg/fireSvg'
-import ProductFeatures from './productFeatures'
 
 const ProductDetail = () => {
     return (
@@ -30,8 +29,6 @@ const ProductDetail = () => {
             </div>
             {/* last hour orders */}
             <div className='flex place-items-center gap-1 font-medium text-neutral-800 text-xs'><span className='animate-pulse'><FireSvg /></span> 18 orders in last 5 hours </div>
-            {/* Product Features */}
-            <ProductFeatures />
         </div>
     )
 }
