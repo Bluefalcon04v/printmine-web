@@ -1,6 +1,7 @@
 "use client";
 import BentoGrid from "@/components/bentoGrid";
 import DynamicCarousel from "@/components/carousel";
+import Footer from "@/components/footer";
 import Image from "next/image";
 import CategoryNavBar from "../components/categoryNavBar";
 
@@ -125,6 +126,7 @@ export default function Home() {
           )}
         />
       </div>
+      <Footer/>
     </div>
 
   );
