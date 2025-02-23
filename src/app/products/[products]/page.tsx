@@ -1,10 +1,10 @@
 'use client'
 import { Category1, Category2, Category3, Category4 } from '@public/images'
-import ProductFeatures from './components/productFeatures'
 import ProductDetail from './components/productDetail'
 import React, { useState } from 'react'
 import { StarSvg } from '@public/icons'
 import Image from 'next/image'
+import ProductFeatures from './components/productFeatures'
 
 const Page = () => {
   const [mainImage, setMainImage] = useState(Category1)
