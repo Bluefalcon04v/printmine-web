@@ -1,10 +1,10 @@
 'use client'
-import React, { useState } from 'react'
-import StarSvg from '../../../../../public/svg/starSvg'
+import ProductCustomization from './productCustomization'
 import FireSvg from '../../../../../public/svg/fireSvg'
+import { StarSvg } from '../../../../../public/icons'
+import React from 'react'
 
 const ProductDetail = () => {
-    const [shape, setShape] = useState(1)
 
     return (
         <div className='flex flex-col gap-2 p-3 w-full'>
@@ -20,10 +20,12 @@ const ProductDetail = () => {
             {/* price tag */}
             <div className='flex flex-col gap-1 my-2 font-medium'>
                 <div className='flex place-items-center bg-[#cc0c39] px-2 py-1 rounded-sm w-fit font-semibold text-white text-xs 2xl'>Limited time deal</div>
-                <div className='flex gap-2'>
-                    <p className='text-neutral-400 line-through'>Rs. 1,238.00</p>
-                    <p>Rs. 999</p>
-                    <div className='flex place-items-center bg-orange-400 px-2 py-0.5 rounded-sm font-semibold text-white text-xs 2xl'>Save 19%</div>
+                <div className='flex flex-col place-items-start py-1'>
+                    <div className='flex gap-2'>
+                        <p className='font-sub font-bold text-lg leading-normal'>Rs. 999</p>
+                        <div className='flex place-items-center bg-orange-400 px-2 py-0.5 rounded-sm font-sub font-semibold text-white text-sm 2xl'>Save 19%</div>
+                    </div>
+                    <p className='text-neutral-400 text-xs line-through'>Rs. 1,238.00</p>
                 </div>
             </div>
             {/* coupons */}
@@ -34,13 +36,14 @@ const ProductDetail = () => {
             <div className='flex place-items-center gap-1 font-medium text-neutral-800 text-xs'><span className='animate-pulse'><FireSvg /></span> 18 orders in last 5 hours </div>
 
             {/* customization */}
-            <div>
-                <div className='flex gap-2'>
-                    {['Circle', 'Square', 'Logo Cutout'].map((shape, i) => (
-                        <p className={`px-2 border text-xs py-0.5 rounded-sm flex place-content-center place-items-center`} key={i}> {shape}</p>
-                    ))}
-                </div>
+            <ProductCustomization />
+
+            {/* check availability */}
+            <div className='flex justify-baseline items-baseline gap-2 py-2'>
+                <p className='font-semibold text-neutral-400 text-xs'>Check Product Availability</p>
+                <input type='text' placeholder='Enter Pincode' className='px-2 py-1 rounded-sm outline-[1.5px] outline-neutral-200 focus:outline-blue-500 focus:font-medium text-gray-600 text-sm' />
             </div>
+            <div className='flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer'>Add to Cart</div>
         </div>
     )
 }
