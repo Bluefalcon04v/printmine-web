@@ -6,8 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import LeftCarouselIcon from "../../public/leftIcon";
-import RightCarouselIcon from "../../public/rightIcon";
+import { LeftIcon, RightIcon } from "@public/icons";
 
 interface IProps {
   data: any[];
@@ -51,18 +50,18 @@ const DynamicCarousel = ({
             onClick={goPrev}
             className="absolute z-40 left-4  top-[40%] cursor-pointer w-40 active:scale-90 transition-all"
           >
-            <LeftCarouselIcon />
+            <LeftIcon />
           </div>
           <div
             onClick={goNext}
             className="absolute z-40 -right-20  top-[40%] cursor-pointer w-40 active:scale-90 transition-all"
           >
-            <RightCarouselIcon />
+            <RightIcon />
           </div>
         </div>
       )}
       <Swiper
-        onSwiper={(swiper:any) => (swiperRef.current = swiper)}
+        onSwiper={(swiper: any) => (swiperRef.current = swiper)}
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={breakpoints}
         // breakpoints={breakpoints}

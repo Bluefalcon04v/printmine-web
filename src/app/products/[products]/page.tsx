@@ -1,7 +1,7 @@
-import StarSvg from '../../../../public/svg/starSvg'
-import { Category1 } from '../../../../public/image'
+import { Category1 } from '../../../../public/images'
 import Image from 'next/image'
 import React from 'react'
+import { StarSvg } from '@public/icons'
 
 const Page = () => {
   return (

@@ -1,4 +1,4 @@
-export default function LeftCarouselIcon() {
+export default function LeftIcon() {
     return (
       <svg
         width="56"
