@@ -27,8 +27,8 @@ const ProductFeatures = () => {
   ]
 
   return (
-    <div className='py-5'>
-      <p className='py-2 font-main text-4xl tracking-wider'>Features We Provide</p>
+    <div className='pt-5'>
+      <p className='py-2 font-main'>Features We Provide</p>
       <div className='gap-2 grid grid-cols-5 h-full'>
         {PRODUCT_FEATURES_DATA.map((feature) => (
           <div key={feature.title} className='relative border-2 rounded-md'>

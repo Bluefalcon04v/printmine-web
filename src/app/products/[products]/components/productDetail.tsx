@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import StarSvg from '../../../../../public/svg/starSvg'
 import FireSvg from '../../../../../public/svg/fireSvg'
 
 const ProductDetail = () => {
+    const [shape, setShape] = useState(1)
+
     return (
         <div className='flex flex-col gap-2 p-3 w-full'>
             {/* heading */}
@@ -29,6 +32,15 @@ const ProductDetail = () => {
             </div>
             {/* last hour orders */}
             <div className='flex place-items-center gap-1 font-medium text-neutral-800 text-xs'><span className='animate-pulse'><FireSvg /></span> 18 orders in last 5 hours </div>
+
+            {/* customization */}
+            <div>
+                <div className='flex gap-2'>
+                    {['Circle', 'Square', 'Logo Cutout'].map((shape, i) => (
+                        <p className={`px-2 border text-xs py-0.5 rounded-sm flex place-content-center place-items-center`} key={i}> {shape}</p>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
