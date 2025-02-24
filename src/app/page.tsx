@@ -1,58 +1,13 @@
-"use client";
-
-import BentoGrid from "@/components/bentoGrid";
-import DynamicCarousel from "@/components/carousel";
-import Footer from "@/components/footer";
-import Image from "next/image";
-
-const sliderData = [
-  "/magneticBadge.png",
-  "/keychain.avif",
-  "/magneticBadge.png",
-  "/keychain.avif",
-  "/magneticBadge.png",
-];
-
-const watchAndBuyData = [
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-  {
-    image: "/pen.jpg",
-    name: "Premium Pen",
-    sellingPrice: 200,
-    actualPrice: 400,
-  },
-];
-
-
+import CategoryNavBar from "@components/homePage/categoryNavBar";
+import ExcellenceTeam from "@components/homePage/excellenceTeam";
+import MeetFounder from "@components/homePage/meetFounder";
+import WatchAndBuy from "@components/homePage/watchAndBuy";
+import HomeSlider from "@components/homePage/homeSlider";
+import BentoGrid from "@components/homePage/bentoGrid";
+import Sections from "@components/homePage/sections";
+import Reviews from "@components/homePage/reviews";
+import Blogs from "@components/homePage/blogs";
+import Footer from "@components/footer";
 
 export default function Home() {
   return (
@@ -68,7 +23,7 @@ export default function Home() {
         <ExcellenceTeam />
         <MeetFounder />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
