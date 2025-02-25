@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/f
 const Footer = () => {
   return (
     <div>
-    <footer className="bg-black/90 text-white mt-16  py-10 px-6">
+    <footer className="bg-[#1d242c] text-white mt-16  py-10 px-6 h-[30rem]">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-center md:text-left">
         <div>
           <h3 className="text-lg font-semibold">REACH OUT TO US</h3>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-          <div className="text-center mb-10 text-gray-400  pt-4">
+          <div className="text-center text-gray-400  py-2 ">
           Copyright © 2025 <Link href="#" className="text-blue-400">PrintMine.in</Link> all rights reserved.
         </div>
         </div>
