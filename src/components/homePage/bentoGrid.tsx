@@ -1,14 +1,16 @@
 import { SampleImage } from "@public/images";
 import Image from "next/image";
+import Link from "next/link";
 
 const BentoGrid = () => {
   return (
     <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      
       <div className="shadow-lg p-6 text-center rounded-2xl h-56 flex flex-col justify-center relative overflow-hidden">
-        <Image src={SampleImage} alt="Keychain" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-        <h3 className="text-xl font-bold relative z-10">METAL KEYCHAINS</h3>
-      </div>
+        <Image src={SampleImage} alt="Keychain" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none" />
+        <Link href="/all-products" >
+        <h3 className="text-xl font-bold relative z-10 transition-colors duration-300 hover:text-blue-500 hover:scale-105">METAL KEYCHAINS</h3>
+        </Link>     
+   </div>
 
       <div className="row-span-2 shadow-lg p-8 flex flex-col items-center justify-center text-center rounded-2xl h-full relative overflow-hidden">
         <Image src={SampleImage} alt="Premium Pens" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-30" />
