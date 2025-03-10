@@ -14,7 +14,7 @@ const HomeSlider = () => {
         data={sliderData}
         breakpoints={1}
         card={(imageSrc: string) => (
-          <div className="h-[55vh] w-full">
+          <div className="w-full h-[55vh]">
             <Image
               src={imageSrc}
               alt="banner-image"
