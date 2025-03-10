@@ -1,11 +1,13 @@
 'use client'
+import { useState } from "react";
 import ProductCustomization from './productCustomization'
 import FireSvg from '../../../../../public/svg/fireSvg'
 import { StarSvg } from '../../../../../public/icons'
 import React from 'react'
+import CartDrawer from "./cartDrawer";
 
 const ProductDetail = () => {
-
+    const [isCartOpen, setIsCartOpen] = useState(false);
     return (
         <div className='flex flex-col gap-2 p-3 w-full'>
             {/* heading */}
@@ -43,8 +45,15 @@ const ProductDetail = () => {
                 <p className='font-semibold text-neutral-400 text-xs'>Check Product Availability</p>
                 <input type='text' placeholder='Enter Pincode' className='px-2 py-1 rounded-sm outline-[1.5px] outline-neutral-200 focus:outline-blue-500 focus:font-medium text-gray-600 text-sm' />
             </div>
-            <div className='flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer'>Add to Cart</div>
+            {/*Add to cart */}
+            <div
+        className="flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
+        onClick={() => setIsCartOpen(true)} >
+        Add to Cart
         </div>
+      {/* Cart Drawer */}
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+    </div>
     )
 }
 
