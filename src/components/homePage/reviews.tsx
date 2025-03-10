@@ -69,21 +69,23 @@ const customerReviews = [
 const Reviews = () => {
   return (
     <div className="mt-10">
-      <h3 className=" mb-10 font-semibold text-4xl text-center">Reviews </h3>
+      <h3 className="mb-10 font-semibold text-4xl text-center">Reviews </h3>
+
+{/* IT SHould be like instagram video reviews */}
 
       <div className="">
         <DynamicCarousel
           data={customerReviews}
           breakpoints={4}
           card={(datum: any) => (
-            <div className="relative max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 text-center">
+            <div className="relative bg-white shadow-lg mx-auto p-6 rounded-2xl max-w-md text-center">
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-50"
                 style={{ backgroundImage: "url('/images/reviewKeyChain.png')" }}
               ></div>
-              <div className="relative z-10">
-                <span className="text-5xl text-gray-300">“</span>
-                <p className="text-lg text-gray-700">{datum.review}</p>
+              <div className="z-10 relative">
+                <span className="text-gray-300 text-5xl">“</span>
+                <p className="text-gray-700 text-lg">{datum.review}</p>
 
                 {/* Star Rating */}
                 <div className="flex justify-center mt-4">
@@ -97,10 +99,10 @@ const Reviews = () => {
 
                 {/* Reviewer Info */}
                 <div className="mt-4">
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="font-semibold text-lg">
                     {datum.name.toUpperCase()}
                   </h3>
-                  {/* <p className="text-sm text-gray-500">
+                  {/* <p className="text-gray-500 text-sm">
                   {role}, {company}
                 </p> */}
                 </div>
