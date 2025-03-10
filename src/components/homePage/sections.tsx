@@ -246,36 +246,6 @@ const Sections = () => {
             data={datum.list}
             breakpoints={5}
             card={(datum: IProductData) => (
-              // <div className="cursor-pointer">
-              //   <div className="bg-neutral-100/80 rounded-t-lg">
-              //     <Image
-              //       alt="data"
-              //       src={datum.image}
-              //       width={200}
-              //       height={200}
-              //       className="mx-auto px-6 py-2 mix-blend-multiply"
-              //     />
-              //   </div>
-              //   <div className="px-6 py-2 border-neutral-200 border-x border-b rounded-b-lg">
-              //     <p className="font-medium text-xl">{datum.name}</p>
-              //     <p className="flex">
-              //       {Array.from({ length: 5 }).map((_, index) => (
-              //         <StarSvg
-              //           key={index}
-              //           className={`w-4 h-4 ${"text-red-500 fill-yellow-500"}`}
-              //         />
-              //       ))}
-              //     </p>
-              //     <div className="flex items-end gap-1 mt-3">
-              //       <span className="font-semibold text-lg">
-              //         &#8377;{datum.sellingPrice}
-              //       </span>
-              //       <span className="text-gray-500 text-base line-through">
-              //         &#8377;{datum.actualPrice}
-              //       </span>
-              //     </div>
-              //   </div>
-              // </div>
               <ProductCard data={datum} />
             )}
           />
@@ -303,7 +273,7 @@ interface IProductData {
 const ProductCard = ({ data }: IProps) => {
   const { image, name, sellingPrice, actualPrice, status, stars, rating } = data
   return (
-    <div className={`group relative hover:shadow-md p-0.5 border border-neutral-200 rounded-sm w-full  transition-all cursor-pointer ${status === 1 && " border-red-300 shadow-2xs shadow-red-400/30"}`}>
+    <div className={`group relative hover:shadow-md p-0.5 border border-neutral-200 rounded-sm w-full  transition-all cursor-pointer `}>
       {/* ------------------------------------------badges------------------------------------------ */}
       {status === 1 && <div className="top-0 z-10 absolute flex bg-red-500 shadow-md shadow-red-400/30 m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
         Best Seller
@@ -325,7 +295,7 @@ const ProductCard = ({ data }: IProps) => {
         </div>
       </div>
       {/* ----------------------------------- AddToCart --------------------------------------------- */}
-      <div className={`bg-indigo-700 py-1.5 border-2 hover:scale-105 active:scale-100 transition-all  hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center ${status === 1 ? " !bg-red-500  hover:!bg-red-400 text-white active:!bg-red-500" : ""}`}>
+      <div className={`bg-indigo-700 py-1.5 border-2 hover:scale-105 active:scale-100 transition-all  hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center `}>
         Add to Cart
       </div>
     </div>

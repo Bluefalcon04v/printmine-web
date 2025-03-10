@@ -46,14 +46,14 @@ const ProductDetail = () => {
                 <input type='text' placeholder='Enter Pincode' className='px-2 py-1 rounded-sm outline-[1.5px] outline-neutral-200 focus:outline-blue-500 focus:font-medium text-gray-600 text-sm' />
             </div>
             {/*Add to cart */}
-            <div
-        className="flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
-        onClick={() => setIsCartOpen(true)} >
-        Add to Cart
+            <button
+                className="flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                onClick={() => setIsCartOpen(true)} >
+                Add to Cart
+            </button>
+            {/* Cart Drawer */}
+            <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
         </div>
-      {/* Cart Drawer */}
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
-    </div>
     )
 }
 
