@@ -1,11 +1,13 @@
-import LeftIcon from "@Icons/leftIcon";
-import RightIcon from "@Icons/rightIcon"
-import StarSvg from "@Icons/starSvg";
 import ContinueReadingIcon from "@Icons/continueReadingIcon";
+import MessageCircleMore from "@Icons/messageCircleMore";
+import RightIcon from "@Icons/rightIcon"
+import LeftIcon from "@Icons/leftIcon";
+import StarSvg from "@Icons/starSvg";
 
 export {
     ContinueReadingIcon,
-    StarSvg,
+    MessageCircleMore,
     RightIcon,
+    StarSvg,
     LeftIcon
 }
