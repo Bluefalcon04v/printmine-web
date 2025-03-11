@@ -54,8 +54,8 @@ const Blogs = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-5 mt-10">
-        {/* {blogsData.slice(0, 3).map((datum, index) => (
+      <div className="gap-4 grid grid-cols-3 mt-10">
+        {blogsData.slice(0, 3).map((datum, index) => (
           <div key={index} className="md:block gap-2 grid grid-cols-12">
             <div className="z-40 relative flex justify-center items-center col-span-4 bg-white mx-auto border border-[#E7E7E7] rounded-lg h-[8rem] md:h-[15rem] lg:h-[15rem] xl:h-[20rem]">
               <div className="flex justify-center w-10/12 xl:w-full">
@@ -89,9 +89,9 @@ const Blogs = () => {
               </Link>
             </div>
           </div>
-        ))} */}
+        ))}
 
-        <InstagramCard />
+        {/* <InstagramCard /> */}
       </div>
 
       <p className="flex justify-end mt-4 cursor-pointer">View All</p>
@@ -102,21 +102,3 @@ const Blogs = () => {
 export default Blogs;
 
 
-const InstagramCard = () => {
-  return (
-    <div className="relative shadow border-2 rounded-lg w-full">
-      <div className="top-2 left-3 absolute flex justify-between items-center w-[92%]">
-      <div className="flex items-center gap-1 font-semibold text-white">Reels <FaChevronDown /></div>
-      <div className="flex bg-white/20 rounded-full">
-        <div className="bg-gray-400 rounded-full w-8 h-8"></div>
-        <div className="bg-gray-400 rounded-full w-8 h-8"></div>
-        <div className="bg-gray-400 rounded-full w-8 h-8"></div>
-      </div>
-      </div>
-      <video autoPlay muted loop width="100%" height="100%" className='rounded-md aspect-auto'>
-        <source src={Product1Video} type="video/mp4" />
-      </video>
-
-    </div>
-  )
-}
