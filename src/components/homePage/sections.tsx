@@ -5,6 +5,9 @@ import { Category1, Category2, Category3, Category4, Category5, Category6, PenIm
 import Image from "next/image";
 import React from "react";
 import DynamicCarousel from "./carousel";
+import { FaHeart } from "react-icons/fa";
+import { FiHeart, FiShoppingCart } from "react-icons/fi";
+import Link from "next/link";
 
 const sectionData = [
   {
@@ -281,6 +284,13 @@ const ProductCard = ({ data }: IProps) => {
       {status === 2 && <div className="top-0 z-10 absolute flex bg-blue-500 shadow-blue-400/30 shadow-md m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
         New Launch
       </div>}
+
+      {/* ------------------------------------------ Like & Add to Cart ---------------------------------------- */}
+      <div className="group-hover:bg-white group-hover:text-slate-700 top-2 right-2 z-40 absolute flex gap-2 bg-neutral-200/30 shadow shadow-slate-300/70 px-2 py-1 rounded-sm text-white/80 text-lg transition-all">
+        <FiHeart className="hover:fill-red-300 active:fill-red-600 hover:scale-125 active:scale-100 transition-all"/>
+        <FiShoppingCart className="hover:fill-yellow-200 active:fill-amber-400 hover:scale-120 active:scale-100 transition-all"/>
+      </div>
+
       {/* ------------------------------------------Images ------------------------------------------ */}
       <Image alt="" src={image} width={400} height={400} className="shadow-md group-hover:shadow-2xs rounded-sm max-h-64 object-cover aspect-square group-hover:scale-105 transition-all" />
       {/* ------------------------------------------Details ------------------------------------------ */}
@@ -295,9 +305,9 @@ const ProductCard = ({ data }: IProps) => {
         </div>
       </div>
       {/* ----------------------------------- AddToCart --------------------------------------------- */}
-      <div className={`bg-indigo-700 py-1.5 border-2 hover:scale-105 active:scale-100 transition-all  hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center `}>
-        Add to Cart
-      </div>
+      <Link href={`/products/magnetic-badge`} className={`bg-indigo-700 py-1.5 border-2 hover:scale-105 active:scale-100 transition-all  hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center `}>
+        View Detail
+      </Link>
     </div>
   )
 }
