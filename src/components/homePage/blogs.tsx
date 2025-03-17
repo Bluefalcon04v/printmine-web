@@ -1,45 +1,42 @@
 import { ContinueReadingIcon } from "@public/icons";
 import { BlogImage } from "@public/images";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { Product1Video } from "../../../public/video";
-import { FaChevronDown } from "react-icons/fa";
 
 const blogsData = [
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
   {
     image: BlogImage,
-    heading: "How Customised gifts impove CLient Retention",
+    heading: "How Customized gifts improve Client Retention",
     cont: "Corporate gifting have evolved over years, with business seeking unique and meaning full ways to express appreciation",
   },
 ];
@@ -54,11 +51,10 @@ const Blogs = () => {
         </p>
       </div>
 
-      <div className="gap-4 grid grid-cols-3 mt-10">
-        {blogsData.slice(0, 3).map((datum, index) => (
-          <div key={index} className="md:block gap-2 grid grid-cols-12">
-            <div className="z-40 relative flex justify-center items-center col-span-4 bg-white mx-auto border border-[#E7E7E7] rounded-lg h-[8rem] md:h-[15rem] lg:h-[15rem] xl:h-[20rem]">
-              <div className="flex justify-center w-10/12 xl:w-full">
+      <div className="gap-6 grid grid-cols-4 mt-10">
+        {blogsData.slice(0, 4).map((datum, index) => (
+          <div key={index} className="md:block gap-2 hover:shadow-md active:shadow-lg border rounded-md hover:scale-105 active:scale-100 transition-all cursor-pointer">
+            <div className="flex justify-center items-center bg-white mx-auto rounded-lg">
                 <Image
                   alt="image"
                   src={datum.image}
@@ -67,34 +63,33 @@ const Blogs = () => {
                   quality={100}
                   loading="lazy"
                   draggable={false}
+                  className="p-2"
                 />
-              </div>
             </div>
 
-            <div className="flex flex-col place-content-center gap-2 md:gap-5 col-span-8 md:mt-4">
-              <h3 className="z-40 md:h-[3rem] 2xl:h-[1.5rem] font-semibold text-[#16192C] text-xs md:text-sm lg:text-base xl:text-lg">
+            <div className="flex flex-col place-content-center gap-1 px-8 py-6">
+              <h3 className="font-semibold text-gray-600 text-lg leading-normal">
                 {datum.heading}
               </h3>
-              <p className="text-[#425466]">
-                By <span className="text-black/80">Atiq Ansari</span> on{" "}
-                <span className="text-black/80">February 10, 2025</span>
-              </p>
-              <p className="md:h-[4rem] text-[#425466] text-xs md:text-sm lg:text-base">
+              <p className="text-neutral-600 leading-snug">
                 {datum.cont}
               </p>
-              <Link href="#">
-                <p className="flex items-center gap-2 text-[#2D68FE] text-xs md:text-sm lg:text-base">
+              <div className="flex justify-between items-center mt-4 w-full">
+              <div className="flex gap-2">
+                <div className="bg-neutral-300 rounded-full w-10 h-10"/>
+                <div className="flex flex-col">
+                  <p className="font-semibold text-gray-500 text-sm">Rohan Das</p>
+                  <p className="font-semibold text-neutral-400 text-xs tracking-wider">11/12/2025</p>
+                </div>
+              </div>
+                <p className="flex items-center gap-2 text-blue-600 hover:text-blue-400 transition-all">
                   Continue Reading <ContinueReadingIcon />
                 </p>
-              </Link>
+              </div>
             </div>
           </div>
         ))}
-
-        {/* <InstagramCard /> */}
       </div>
-
-      <p className="flex justify-end mt-4 cursor-pointer">View All</p>
     </div>
   );
 };
