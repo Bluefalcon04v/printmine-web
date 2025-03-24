@@ -4,37 +4,40 @@ import Link from "next/link";
 
 const BentoGrid = () => {
   return (
-    <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="shadow-lg p-6 text-center rounded-2xl h-56 flex flex-col justify-center relative overflow-hidden">
-        <Image src={SampleImage} alt="Keychain" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none" />
-        <Link href="/all-products" >
-        <h3 className="text-xl font-bold relative z-10 transition-colors duration-300 hover:text-blue-500 hover:scale-105">METAL KEYCHAINS</h3>
-        </Link>     
-   </div>
+  //   <div className="gap-6 grid grid-cols-1 md:grid-cols-3 p-8">
+  //     <div className="relative flex flex-col justify-center shadow-lg p-6 rounded-2xl h-56 overflow-hidden text-center">
+  //       <Image src={SampleImage} alt="Keychain" layout="fill" objectFit="cover" className="absolute inset-0 opacity-70 w-full h-full object-cover pointer-events-none" />
+  //       <Link href="/all-products" >
+  //       <h3 className="z-10 relative font-bold hover:text-blue-500 text-xl hover:scale-105 transition-colors duration-300">METAL KEYCHAINS</h3>
+  //       </Link>     
+  //  </div>
 
-      <div className="row-span-2 shadow-lg p-8 flex flex-col items-center justify-center text-center rounded-2xl h-full relative overflow-hidden">
-        <Image src={SampleImage} alt="Premium Pens" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-        <h1 className="text-4xl font-bold text-red-500 relative z-10">Premium</h1>
-        <h2 className="text-4xl font-bold text-blue-900 relative z-10">Corporate Gifts</h2>
-      </div>
+  //     <div className="relative flex flex-col justify-center items-center row-span-2 shadow-lg p-8 rounded-2xl h-full overflow-hidden text-center">
+  //       <Image src={SampleImage} alt="Premium Pens" layout="fill" objectFit="cover" className="absolute inset-0 opacity-30 w-full h-full object-cover" />
+  //       <h1 className="z-10 relative font-bold text-red-500 text-4xl">Premium</h1>
+  //       <h2 className="z-10 relative font-bold text-blue-900 text-4xl">Corporate Gifts</h2>
+  //     </div>
 
-      <div className="shadow-lg p-6 text-center rounded-2xl h-56 flex flex-col justify-center relative overflow-hidden">
-        <Image src={SampleImage} alt="Badge" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-        <h3 className="text-xl font-bold text-black relative z-10">MAGNETIC BADGES</h3>
-      </div>
+  //     <div className="relative flex flex-col justify-center shadow-lg p-6 rounded-2xl h-56 overflow-hidden text-center">
+  //       <Image src={SampleImage} alt="Badge" layout="fill" objectFit="cover" className="absolute inset-0 opacity-70 w-full h-full object-cover" />
+  //       <h3 className="z-10 relative font-bold text-black text-xl">MAGNETIC BADGES</h3>
+  //     </div>
 
-      <div className="shadow-lg p-6 text-center rounded-2xl h-56 flex flex-col justify-center relative overflow-hidden">
-        <Image src={SampleImage} alt="Metal Pen" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-        <h3 className="text-xl font-bold relative z-10">PREMIUM METAL PENS</h3>
-        <p className="text-sm text-black-700 relative z-10">Perfect gift for corporates</p>
-      </div>
+  //     <div className="relative flex flex-col justify-center shadow-lg p-6 rounded-2xl h-56 overflow-hidden text-center">
+  //       <Image src={SampleImage} alt="Metal Pen" layout="fill" objectFit="cover" className="absolute inset-0 opacity-70 w-full h-full object-cover" />
+  //       <h3 className="z-10 relative font-bold text-xl">PREMIUM METAL PENS</h3>
+  //       <p className="z-10 relative text-black-700 text-sm">Perfect gift for corporates</p>
+  //     </div>
 
-      <div className="shadow-lg p-6 text-center rounded-2xl h-56 flex flex-col justify-center relative overflow-hidden">
-        <Image src={SampleImage} alt="Card Holder" layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-        <h3 className="text-xl font-bold text-black relative z-10">PREMIUM VISITING CARD HOLDER</h3>
-      </div>
+  //     <div className="relative flex flex-col justify-center shadow-lg p-6 rounded-2xl h-56 overflow-hidden text-center">
+  //       <Image src={SampleImage} alt="Card Holder" layout="fill" objectFit="cover" className="absolute inset-0 opacity-70 w-full h-full object-cover" />
+  //       <h3 className="z-10 relative font-bold text-black text-xl">PREMIUM VISITING CARD HOLDER</h3>
+  //     </div>
+  //   </div>
 
-    </div>
+  <div className="bg-black/10 border-2 w-full h-[50vh]">
+
+  </div>
   );
 };
 
