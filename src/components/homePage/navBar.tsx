@@ -1,10 +1,11 @@
 "use client"
-
+import { FiHeart, FiSearch, FiShoppingCart } from 'react-icons/fi';
 import { Logo } from '../../../public/images';
+import { useRouter } from 'next/navigation';
+import AnimatedText from '../animateText';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { useRouter } from 'next/navigation';
 
 const NavBar = () => {
   const NAV_ITEMS = [
@@ -23,15 +24,15 @@ const NavBar = () => {
         <Image alt='logo' src={Logo} width={200} height={200} className='w-20 h-16 object-fill aspect-square cursor-pointer' onClick={()=>router.push("/")} />
         <div className='flex gap-4 text-xs'>
           {NAV_ITEMS.map((val, i) => (
-            <Link href={val.link} key={i} className='flex gap-1 px-1 hover:text-neutral-600 capitalize hover:scale-105 active:scale-95 transition-all cursor-pointer'>
-              {val.name}
+            <Link href={val.link} key={i} className='flex px-1 overflow-hidden hover:text-neutral-600 capitalize cursor-pointer'>
+              <AnimatedText text={val.name}/>
             </Link>
           ))}
         </div>
-        <div className='flex gap-4 text-xs'>
-          <p>Search</p>
-          <p>Like</p>
-          <p>Cart</p>
+        <div className='flex gap-4 text-sm'>
+          <FiSearch className='cursor-pointer'/>
+          <FiHeart className='cursor-pointer'/>
+          <FiShoppingCart className='cursor-pointer'/>
         </div>
       </div>
     </div>

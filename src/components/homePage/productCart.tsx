@@ -1,3 +1,4 @@
+'use client'
 import { FiHeart, FiShoppingCart } from 'react-icons/fi'
 import { StarSvg } from '../../../public/icons'
 import Image from 'next/image'
@@ -30,7 +31,7 @@ const ProductCart = ({ data }: IProps) => {
             </div>}
 
             {/* ------------------------------------------ Like & Add to Cart ---------------------------------------- */}
-            <div className="group-hover:bg-white group-hover:text-slate-700 top-2 right-2 z-40 absolute flex gap-2 bg-neutral-200/30 shadow shadow-slate-300/70 px-2 py-1 rounded-sm text-white/80 text-lg transition-all">
+            <div className="top-2 right-2 z-20 absolute flex gap-2 bg-neutral-200/30 group-hover:bg-white shadow shadow-slate-300/70 px-2 py-1 rounded-sm text-white/80 group-hover:text-slate-700 text-lg transition-all">
                 <FiHeart className="hover:fill-red-300 active:fill-red-600 hover:scale-125 active:scale-100 transition-all" />
                 <FiShoppingCart className="hover:fill-yellow-200 active:fill-amber-400 hover:scale-120 active:scale-100 transition-all" />
             </div>

@@ -19,7 +19,6 @@ const AnimatedText = ({ text }:IProps) => {
           <span
             className={`absolute inline-block transition-transform duration-200 transform group-hover:translate-y-[0px] translate-y-full`}
             style={{
-              bottom: "2px", 
               left: 0,
               transitionDelay: `${index * 50}ms`,
             }}

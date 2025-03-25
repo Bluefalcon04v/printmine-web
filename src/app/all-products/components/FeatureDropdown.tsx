@@ -9,19 +9,19 @@ import { FaChevronDown } from "react-icons/fa";
     const options = ["Featured", "Price: Low to High", "Price: High to Low", "Newest"];
   
     return (
-      <div className="relative">
+      <div className="z-30 relative bg-white">
         <button
-          className="p-2 border rounded flex items-center gap-2"
+          className="flex items-center gap-2 p-2 border rounded"
           onClick={() => setIsOpen(!isOpen)}
         >
           {selected} <FaChevronDown />
         </button>
         {isOpen && (
-          <ul className="absolute bg-white border rounded shadow-md mt-2 w-40">
+          <ul className="z-20 absolute bg-white shadow-md mt-2 border rounded w-40">
             {options.map((option) => (
               <li
                 key={option}
-                className="p-2 hover:bg-gray-100 cursor-pointer"
+                className="hover:bg-gray-100 p-2 cursor-pointer"
                 onClick={() => {
                   setSelected(option);
                   setIsOpen(false);
