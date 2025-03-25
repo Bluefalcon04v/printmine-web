@@ -4,14 +4,14 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/f
 const Footer = () => {
   return (
     <div>
-    <footer className="bg-[#1d242c] text-white mt-16  py-10 px-6 h-[30rem]">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-center md:text-left">
+    <footer className="bg-[#1d242c] mt-16 px-6 py-10 pb-20 text-white">
+      <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto text-sm md:text-left text-center container">
         <div>
-          <h3 className="text-lg font-semibold">REACH OUT TO US</h3>
+          <h3 className="font-semibold text-lg">REACH OUT TO US</h3>
           <p>Company Address</p>
           <p className="mt-2">Company Name : Company_name</p>
-          <p className="flex items-center justify-center md:justify-start mt-2">✉️ <a href="mailto:order@printmine.in" className="ml-2">order@printmine.in</a></p>
-          <p className="flex items-center justify-center md:justify-start mt-2">📞<a href="tel:+916262427271" className="ml-2">+91 6262427271</a></p>
+          <p className="flex justify-center md:justify-start items-center mt-2">✉️ <a href="mailto:order@printmine.in" className="ml-2">order@printmine.in</a></p>
+          <p className="flex justify-center md:justify-start items-center mt-2">📞<a href="tel:+916262427271" className="ml-2">+91 6262427271</a></p>
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             <FaFacebookF className="cursor-pointer" />
             <FaInstagram className="cursor-pointer" />
@@ -20,8 +20,8 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-semibold">Help</h3>
-          <ul className="mt-2 space-y-2">
+          <h3 className="font-semibold text-lg">Help</h3>
+          <ul className="space-y-2 mt-2">
             <li><Link href="#">My Account</Link></li>
             <li><Link href="#">Cancellation & Refund</Link></li>
             <li><Link href="#">Shipping & Delivery Policy</Link></li>
@@ -30,8 +30,8 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold">Collections</h3>
-          <ul className="mt-2 space-y-2">
+          <h3 className="font-semibold text-lg">Collections</h3>
+          <ul className="space-y-2 mt-2">
             <li><Link href="#">Metal Keychain</Link></li>
             <li><Link href="#">Mobile Stand</Link></li>
             <li><Link href="#">Metal Pens</Link></li>
@@ -40,16 +40,16 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold">Our Company</h3>
-          <ul className="mt-2 space-y-2">
+          <h3 className="font-semibold text-lg">Our Company</h3>
+          <ul className="space-y-2 mt-2">
             <li><Link href="#">About Us</Link></li>
             <li><Link href="#">Media Coverage</Link></li>
           </ul>
         </div>
       </div>
     </footer>
-          <div className="text-center text-gray-400  py-2 ">
-          Copyright © 2025 <Link href="#" className="text-blue-400">PrintMine.in</Link> all rights reserved.
+          <div className="my-2 text-gray-400 text-center">
+          Copyright © 2025 <Link href="#" className="px-0.5 text-blue-400 capitalize">Tohfe ka theka</Link> all rights reserved.
         </div>
         </div>
   );
