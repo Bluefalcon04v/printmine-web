@@ -5,43 +5,44 @@ import { Logo } from '../../../public/images';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavbarData  from "lib/navbar.json"
 
-const groupedNav = [
-  {
-    label: "Writing",
-    items: [
-      { name: "Plastic Pen", link: "/products/plastic-pen" },
-      { name: "Metal Pen", link: "/products/metal-pen" },
-      { name: "Notebook", link: "/products/notebook" },
-    ],
-  },
-  {
-    label: "Office & Tech",
-    items: [
-      { name: "Laptop Sleeve", link: "/products/laptop-sleeve" },
-      { name: "Laptop Bag", link: "/products/laptop-bag" },
-      { name: "Power Bank", link: "/products/power-bank" },
-      { name: "Mobile Stand", link: "/products/mobile-stand" },
-    ],
-  },
-  {
-    label: "Accessories",
-    items: [
-      { name: "Pen Keychain", link: "/products/pen-keychain" },
-      { name: "Keychain", link: "/products/keychain" },
-      { name: "Bottles", link: "/products/bottles" },
-    ],
-  },
-  {
-    label: "Others",
-    items: [
-      { name: "Clock", link: "/products/clock" },
-      { name: "Packing Materials", link: "/products/packing-materials" },
-      { name: "Novelty Items", link: "/products/novelty-items" },
-      { name: "Gift Set", link: "/products/gift-set" },
-    ],
-  },
-];
+// const groupedNav = [
+//   {
+//     label: "Writing",
+//     items: [
+//       { name: "Plastic Pen", link: "/products/plastic-pen" },
+//       { name: "Metal Pen", link: "/products/metal-pen" },
+//       { name: "Notebook", link: "/products/notebook" },
+//     ],
+//   },
+//   {
+//     label: "Office & Tech",
+//     items: [
+//       { name: "Laptop Sleeve", link: "/products/laptop-sleeve" },
+//       { name: "Laptop Bag", link: "/products/laptop-bag" },
+//       { name: "Power Bank", link: "/products/power-bank" },
+//       { name: "Mobile Stand", link: "/products/mobile-stand" },
+//     ],
+//   },
+//   {
+//     label: "Accessories",
+//     items: [
+//       { name: "Pen Keychain", link: "/products/pen-keychain" },
+//       { name: "Keychain", link: "/products/keychain" },
+//       { name: "Bottles", link: "/products/bottles" },
+//     ],
+//   },
+//   {
+//     label: "Others",
+//     items: [
+//       { name: "Clock", link: "/products/clock" },
+//       { name: "Packing Materials", link: "/products/packing-materials" },
+//       { name: "Novelty Items", link: "/products/novelty-items" },
+//       { name: "Gift Set", link: "/products/gift-set" },
+//     ],
+//   },
+// ];
 
 const NavBar = () => {
 
@@ -75,7 +76,7 @@ const NavBar = () => {
 
         {/* Nav Dropdowns */}
         <div ref={dropdownRef} className='relative flex gap-4 text-sm'>
-          {groupedNav.map((elem, i) => (
+          {NavbarData.map((elem, i) => (
             <div
               key={i}
               
