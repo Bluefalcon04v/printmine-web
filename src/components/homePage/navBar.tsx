@@ -75,27 +75,27 @@ const NavBar = () => {
         />
 
         {/* Nav Dropdowns */}
-        <div ref={dropdownRef} className='relative flex gap-4 text-sm'>
+        <div className='relative flex gap-4 text-sm'>
           {NavbarData.map((elem, i) => (
             <div
               key={i}
               
               className={`group relative cursor-pointer`}
               onMouseEnter={() => setOpenIndex(i)}
-              // onMouseLeave={() => setOpenIndex(null)}
+              onMouseLeave={() => setOpenIndex(null)}
             >
-              <button className='font-medium hover:text-neutral-600 capitalize cursor-pointer'>
+              <button className={`flex items-center h-8 font-medium text-center capitalize cursor-pointer transition-all ease-in-out ${openIndex === i && "text-neutral-500"}`}>
                 {elem.label}
               </button>
 
               {/* Dropdown List */}
               {openIndex === i && (
-                <div className='top-6 left-0 z-50 absolute flex flex-col bg-white shadow-md p-2 border rounded-md min-w-max'>
+                <div className='modal-top-st left-0 z-50 absolute flex flex-col bg-white shadow-md p-2 border rounded-md min-w-max'>
                   {elem.items.map((item, j) =>  (
                       <Link
                         key={j}
                         href={item.link}
-                        className='px-2 py-1 overflow-hidden hover:text-blue-600 text-sm whitespace-nowrap'
+                        className='px-2 py-1 overflow-hidden text-neutral-800 hover:text-blue-500 active:text-blue-400 text-sm whitespace-nowrap transition-all ease-in-out'
                       >
                         {item.name}
                       </Link>

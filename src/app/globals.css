@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import 'tailwindcss';
-
-
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "tailwindcss";
 
 @theme {
   --color-background: var(--background);
@@ -13,7 +11,7 @@
 }
 
 :root {
-/* --------------------------- background */
+  /* --------------------------- background */
   --background: #ffffff;
   --bg-light-gray: #f2f2f7;
 
@@ -24,20 +22,20 @@
   --dark-gray: #85858b;
 }
 
-@layer base{
-  *{
+@layer base {
+  * {
     border-color: var(--border-gray);
   }
 }
 
-.font-main{
+.font-main {
   font-family: "Great Vibes", serif;
   font-size: 2.5rem;
   letter-spacing: 0.05em;
   cursor: default;
 }
 
-.font-sub{
+.font-sub {
   font-family: "DM Sans", serif;
 }
 
@@ -53,4 +51,16 @@
   z-index: 100;
   position: relative;
   padding: 10px;
+}
+
+/* -------------------- Starting Style ------------------------- */
+.modal-top-st {
+  transform: translateY(0px);
+  transition: all 0.3s;
+  opacity: 1;
+
+  @starting-style {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
 }
