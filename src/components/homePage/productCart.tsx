@@ -126,20 +126,10 @@ export interface IProductData {
 const ProductCart = ({ data }: IProps) => {
   const { image, name, sellingPrice, actualPrice, status, stars, rating } = data;
 
-  // Function to send message on WhatsApp
-  // const sendWhatsAppMessage = () => {
-  //   const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${sellingPrice}`;
-  //   const encodedMessage = encodeURIComponent(message); // Encoding message to make sure it's URL-safe
-  //   const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
-
-  //   window.open(whatsappUrl, "_blank"); // Open WhatsApp in a new tab
-  // };
-
-
   const sendWhatsAppMessage = () => {
-    const phoneNumber = '7055533803'; // The phone number to send the message to
+    const phoneNumber = '7055533803'; 
     const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${sellingPrice}`;
-    const encodedMessage = encodeURIComponent(message); // Encoding message to make sure it's URL-safe
+    const encodedMessage = encodeURIComponent(message); 
     const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank"); // Open WhatsApp Web in a new tab
