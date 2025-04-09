@@ -25,10 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Product Name" />
+        <meta property="og:description" content="Check out this amazing product!" />
+        <meta property="og:image" content="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID" />
+        <meta property="og:url" content="https://your-product-page-link.com" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased scroll-smooth w-screen h-full bg-background flex flex-col `} >
         <NavBar />
         <div className="mt-[4.7rem]">
-        {children}
+          {children}
         </div>
       </body>
     </html>

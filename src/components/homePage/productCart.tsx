@@ -127,9 +127,9 @@ const ProductCart = ({ data }: IProps) => {
   const { image, name, sellingPrice, actualPrice, status, stars, rating } = data;
 
   const sendWhatsAppMessage = () => {
-    const phoneNumber = '7055533803'; 
+    const phoneNumber = '7055533803';
     const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${sellingPrice}`;
-    const encodedMessage = encodeURIComponent(message); 
+    const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank"); // Open WhatsApp Web in a new tab
@@ -159,7 +159,7 @@ const ProductCart = ({ data }: IProps) => {
         height={400}
         className="shadow-md group-hover:shadow-2xs rounded-sm max-h-64 aspect-video group-hover:scale-105 transition-all"
       />
-      
+
       {/* ------------------------------------------ Details ------------------------------------------ */}
       <div className="flex flex-col gap-1.5 px-3 py-2">
         <p className="font-sub font-medium text-neutral-800 text-sm leading-tight">
