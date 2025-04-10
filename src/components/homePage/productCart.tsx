@@ -31,16 +31,16 @@ const ProductCart = ({ data }: IProps) => {
       className={`group relative hover:shadow-md p-0.5 border border-neutral-200 rounded-sm w-full transition-all cursor-pointer`}
     >
       {/* ------------------------------------------badges------------------------------------------ */}
-      {/* {status === 1 && (
-        <div className="top-0 z-10 absolute flex bg-red-500 shadow-md shadow-red-400/30 m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
-          Best Seller
-        </div>
-      )}
-      {status === 2 && (
-        <div className="top-0 z-10 absolute flex bg-blue-500 shadow-blue-400/30 shadow-md m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
-          New Launch
-        </div>
-      )} */}
+        {/* {status === 1 && (
+          <div className="top-0 z-10 absolute flex bg-red-500 shadow-md shadow-red-400/30 m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
+            Best Seller
+          </div>
+        )}
+        {status === 2 && (
+          <div className="top-0 z-10 absolute flex bg-blue-500 shadow-blue-400/30 shadow-md m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
+            New Launch
+          </div>
+        )} */}
 
       {/* ------------------------------------------ Images ------------------------------------------ */}
       <Image
@@ -56,7 +56,7 @@ const ProductCart = ({ data }: IProps) => {
         <div className="flex items-center gap-1 font-sub font-semibold text-neutral-800 text-base leading-tight">
           <p className="">
             Product Code:
-          </p>
+          </p> 
           <p className="">
             {name}
           </p>
