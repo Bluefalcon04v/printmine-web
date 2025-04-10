@@ -14,7 +14,7 @@ export default function Page() {
         <FeatureDropdown />
       </div>
       <div className="mx-auto w-9/12">
-        <div className="gap-x-10 gap-y-10 grid grid-cols-4">
+        <div className="gap-8 max-md:gap-x-4 grid grid-cols-4 max-sm:grid-cols-2 max-md:grid-cols-3">
           {MetalPens.map((item, index) => (
             <ProductCart data={item} key={index} />
           ))}
