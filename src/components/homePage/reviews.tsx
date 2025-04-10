@@ -65,7 +65,7 @@ const Reviews = () => {
         <DynamicCarousel
           data={customerReviews}
           breakpoints={4}
-          card={(datum: any) => (
+          card={(datum) => (
             <InstagramCard data={datum} />
           )}
         />
@@ -78,7 +78,7 @@ export default Reviews;
 
 
 
-const InstagramCard = ({ data }: { data: any }) => {
+const InstagramCard = ({ data }: { data }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleToggle = () => {

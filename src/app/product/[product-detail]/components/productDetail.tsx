@@ -1,13 +1,13 @@
 'use client'
-import { useState } from "react";
+// import { useState } from "react";
 import ProductCustomization from './productCustomization'
 import FireSvg from '../../../../../public/svg/fireSvg'
 import { StarSvg } from '../../../../../public/icons'
 import React from 'react'
-import CartDrawer from "./cartDrawer";
+// import CartDrawer from "./cartDrawer";
 
 const ProductDetail = () => {
-    const [isCartOpen, setIsCartOpen] = useState(false);
+    // const [setIsCartOpen] = useState(false);
     return (
         <div className='flex flex-col gap-2 p-3 w-full'>
             {/* heading */}
@@ -48,11 +48,12 @@ const ProductDetail = () => {
             {/*Add to cart */}
             <button
                 className="flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
-                onClick={() => setIsCartOpen(true)} >
+                // onClick={() => setIsCartOpen(true)} 
+                >
                 Add to Cart
             </button>
             {/* Cart Drawer */}
-            <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+            {/* <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} /> */}
         </div>
     )
 }

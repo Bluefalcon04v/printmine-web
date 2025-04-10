@@ -4,7 +4,7 @@ const ExcellenceTeam = () => {
   return (
     <div className="mt-20">
       {" "}
-      <div className="relative w-full h-[50vh] flex items-center justify-center text-center">
+      <div className="relative flex justify-center items-center w-full h-[50vh] text-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
@@ -12,12 +12,12 @@ const ExcellenceTeam = () => {
         ></div>
 
         {/* Overlay Content */}
-        <div className="relative z-10 w-1/2 px-6">
-          <h2 className="text-4xl font-bold text-black mb-4">
+        <div className="z-10 relative px-6 w-1/2">
+          <h2 className="mb-4 font-bold text-black text-4xl">
             Reason Behind the Success of This Company
           </h2>
-          <p className="text-lg text-black/90">
-            Our team's dedication, innovative mindset, and strong leadership
+          <p className="text-black/90 text-lg">
+            Our teams dedication, innovative mindset, and strong leadership
             have been the key drivers of our success. With a passion for
             excellence and customer satisfaction, we continue to grow and evolve
             in the industry.

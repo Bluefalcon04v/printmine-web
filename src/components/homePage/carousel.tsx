@@ -41,10 +41,10 @@ const DynamicCarousel = ({
     }
   };
   return (
-    <div className="w-full relative flex place-content-center place-items-center">
+    <div className="relative flex place-content-center place-items-center w-full">
       <div
         onClick={goPrev}
-        className=" z-40  place-items-center w-[5%] cursor-pointer  active:scale-90 transition-all"
+        className="z-40 place-items-center w-[5%] active:scale-90 transition-all cursor-pointer"
       >
         <LeftIcon />
       </div>
@@ -52,7 +52,7 @@ const DynamicCarousel = ({
       <Swiper
         onSwiper={(swiper: any) => (swiperRef.current = swiper)}
         modules={[Navigation, Pagination, Autoplay]}
-        className="mySwiper w-[90%]"
+        className="w-[90%] mySwiper"
         slidesPerView={breakpoints}
         slidesPerGroup={breakpoints}
         // breakpoints={breakpoints}
@@ -71,7 +71,7 @@ const DynamicCarousel = ({
 
       <div
         onClick={goNext}
-        className=" z-40  place-items-center w-[5%] cursor-pointer  active:scale-90 transition-all"
+        className="z-40 place-items-center w-[5%] active:scale-90 transition-all cursor-pointer"
       >
         <RightIcon />
       </div>

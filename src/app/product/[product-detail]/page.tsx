@@ -6,9 +6,9 @@ import { StarSvg } from '@public/icons'
 import Image from 'next/image'
 import ProductFeatures from './components/productFeatures'
 import Footer from '../../../components/footer'
-import DynamicCarousel from '../../../components/homePage/carousel'
-import { LISTING_DATA } from '../../all-products/page'
-import ProductCart, { IProductData } from '../../../components/homePage/productCart'
+// import DynamicCarousel from '../../../components/homePage/carousel'
+// import { LISTING_DATA } from '../../all-products/page'
+// import ProductCart, { IProductData } from '../../../components/homePage/productCart'
 import Reviews from '../../../components/homePage/reviews'
 
 const Page = () => {
@@ -54,13 +54,13 @@ const Page = () => {
         {/* carousel */}
         <div>
           <p className='py-4 pt-16 font-main font-semibold text-center'>Corporate Gift Collection</p>
-          <DynamicCarousel
+          {/* <DynamicCarousel
             data={LISTING_DATA}
             breakpoints={5}
             card={(LISTING_DATA: IProductData) => (
               <ProductCart data={LISTING_DATA} />
             )}
-          />
+          /> */}
         </div>
           <Reviews />
       </div>

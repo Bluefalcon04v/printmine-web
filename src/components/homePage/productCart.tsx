@@ -15,7 +15,7 @@ export interface IProductData {
 }
 
 const ProductCart = ({ data }: IProps) => {
-  const { image, name, price, moq, status } = data;
+  const { image, name, price, moq } = data;
 
   const sendWhatsAppMessage = () => {
     const phoneNumber = '7055533803';
