@@ -9,8 +9,9 @@ import "swiper/css/pagination";
 import { LeftIcon, RightIcon } from "@public/icons";
 
 interface IProps {
-  data: any[];
-  card: any;
+  data
+  card
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   breakpoints?: any;
 }
 
@@ -50,7 +51,7 @@ const DynamicCarousel = ({
       </div>
 
       <Swiper
-        onSwiper={(swiper: any) => (swiperRef.current = swiper)}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         modules={[Navigation, Pagination, Autoplay]}
         className="w-[90%] mySwiper"
         slidesPerView={breakpoints}
