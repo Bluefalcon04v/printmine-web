@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const groupedNav = [
   {
-    label: "Writing",
+    label: "Stationary",
     items: [
       { name: "Plastic Pen", link: "/plastic-pen" },
       { name: "Metal Pen", link: "/metal-pen" },
@@ -17,30 +17,39 @@ const groupedNav = [
     ],
   },
   {
-    label: "Office & Tech",
+    label: "Bag",
     items: [
       { name: "Laptop Sleeve", link: "/laptop-sleeve" },
       { name: "Laptop Bag", link: "/laptop-bag" },
-      { name: "Power Bank", link: "/power-bank" },
-      { name: "Mobile Stand", link: "/mobile-stand" },
     ],
   },
   {
-    label: "Accessories",
-    items: [
-      { name: "Pen Keychain", link: "/pen-keychain" },
-      { name: "Keychain", link: "/keychain" },
-      { name: "Bottles", link: "/bottles" },
-    ],
+    label: "Key Chain",
+    items: [{ name: "Pen Keychain", link: "/pen-keychain" }],
   },
   {
-    label: "Others",
+    label: "Novelty",
     items: [
-      { name: "Clock", link: "/clock" },
-      { name: "Packing Materials", link: "/packing-materials" },
-      { name: "Novelty Items", link: "/novelty-items" },
+      { name: "Novelty Items", link: "/novelty" },
       { name: "Gift Set", link: "/gift-set" },
+      { name: "Packing Materials", link: "/packing-materials" },
     ],
+  },
+  {
+    label: "Clock",
+    items: [{ name: "Clock", link: "/clock" }],
+  },
+  {
+    label: "Bottles",
+    items: [{ name: "Bottles", link: "/bottle" }],
+  },
+  {
+    label: "Power Bank",
+    items: [{ name: "Power Bank", link: "/power-bank" }],
+  },
+  {
+    label: "Mobile Stand",
+    items: [{ name: "Mobile Stand", link: "/mobile-stand" }],
   },
 ];
 
@@ -77,38 +86,57 @@ const NavBar = () => {
 
         {/* Nav Dropdowns */}
         <div className="relative flex gap-4 text-sm">
-          {groupedNav.map((elem, i) => (
-            <div
-              key={i}
-              className={`group relative cursor-pointer`}
-              onMouseEnter={() => setOpenIndex(i)}
-              onMouseLeave={() => setOpenIndex(null)}
-            >
-              <button
-                className={classNames(
-                  "flex items-center h-8 font-medium text-center capitalize cursor-pointer transition-all ease-in-out",
-                  openIndex === i && "text-neutral-500"
-                )}
-              >
-                {elem.label}
-              </button>
+          {groupedNav.map((elem, i) => {
+            const hasMultipleItems = elem.items && elem.items.length > 1;
+            const singleItem =
+              elem.items && elem.items.length === 1 ? elem.items[0] : null;
 
-              {/* Dropdown List */}
-              {openIndex === i && (
-                <div className="modal-top-st left-0 z-50 absolute flex flex-col bg-white shadow-md p-2 border rounded-md min-w-max">
-                  {elem.items.map((item, j) => (
-                    <Link
-                      key={j}
-                      href={item.link}
-                      className="px-2 py-1 overflow-hidden text-neutral-800 hover:text-blue-500 active:text-blue-400 text-sm whitespace-nowrap transition-all ease-in-out"
+            return (
+              <div
+                key={i}
+                className="group relative cursor-pointer"
+                onMouseEnter={() => hasMultipleItems && setOpenIndex(i)}
+                onMouseLeave={() => hasMultipleItems && setOpenIndex(null)}
+              >
+                {hasMultipleItems ? (
+                  <>
+                    <button
+                      className={classNames(
+                        "flex items-center h-8 font-medium text-center capitalize transition-all ease-in-out",
+                        openIndex === i && "text-neutral-500"
+                      )}
                     >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                      {elem.label}
+                    </button>
+
+                    {openIndex === i && (
+                      <div
+                        ref={dropdownRef}
+                        className="modal-top-st left-0 z-50 absolute flex flex-col bg-white shadow-md p-2 border rounded-md min-w-max"
+                      >
+                        {elem.items.map((item, j) => (
+                          <Link
+                            key={j}
+                            href={item.link}
+                            className="px-2 py-1 text-neutral-800 hover:text-blue-500 text-sm whitespace-nowrap transition-all"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : singleItem ? (
+                  <Link
+                    href={singleItem.link}
+                    className="flex items-center h-8 font-medium hover:text-blue-500 text-center capitalize transition-all ease-in-out"
+                  >
+                    {elem.label}
+                  </Link>
+                ) : null}
+              </div>
+            );
+          })}
         </div>
 
         {/* Icons */}
