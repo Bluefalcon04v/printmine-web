@@ -26,19 +26,11 @@ const MeetFounder = () => {
 
         <div className="place-content-center w-10/12">
           <h2 className="font-semibold text-4xl">
-            John Doe – Co-founder of Amy Company
+            Shubham – Co-founder of Thofe Ka Theka
           </h2>
-          <p className="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            facilisi. Sed ut purus at sapien malesuada fermentum. Curabitur
-            consequat, neque nec fermentum pharetra, lacus nisi dignissim erat,
-            vel suscipit elit purus in velit.
-          </p>
-          <p>
-            Vivamus tristique, justo nec consectetur posuere, lorem sapien
-            rhoncus tortor, ac tincidunt lacus erat at lacus. Ut ultricies
-            euismod purus, eget accumsan nisi gravida non. In euismod velit
-            vitae odio tincidunt, nec tempus elit pharetra.
+          <p className="my-4 text-base capitalize">
+            With people giving and receiving generic gifts. the gift-giving gesture has become somewhat monotonous. We, at Tohfe ka theka aim to redefine this gifting landscape with a wide range of personalized, premium and delightful gift options, limited edition specials and beyond.
+            Our goal is to make the gifting experience unforgettable for both the person giving the gift and the person receiving it.
           </p>
 
           <h2 className="mt-3 font-semibold text-blue-900 text-2xl">Our vision is to revolutionize the way businesses interact with technology.</h2>

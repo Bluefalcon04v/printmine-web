@@ -40,7 +40,7 @@ const CategoryNavBar = () => {
                         <Image src={data.image} alt={data.title} width={500} height={200} className='rounded-sm w-full h-full object-cover' />
                         <div className='top-0 left-0 absolute bg-black opacity-10 group-hover:opacity-40 rounded-sm w-full h-full transition-all' />
                         <div className='bottom-8 z-20 relative place-content-center place-items-center'>
-                            <p className='group-hover:text-white text-shadow-md font-semibold text-white text-sm group-hover:scale-115 transition-all'>
+                            <p className='text-shadow-md font-semibold text-white group-hover:text-white text-sm group-hover:scale-115 transition-all'>
                                 {data.title}
                             </p>
                         </div>

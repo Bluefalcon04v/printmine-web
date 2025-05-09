@@ -1,11 +1,10 @@
 "use client";
-
-import { CoverImage1, CoverImage2 } from "@public/images";
+import { Banner1, Banner2, Banner3 } from "@public/images";
 import Image from "next/image";
 import React from "react";
 import DynamicCarousel from "./carousel";
 
-const sliderData = [CoverImage1, CoverImage2, CoverImage1];
+const sliderData = [Banner1, Banner2, Banner3];
 
 const HomeSlider = () => {
   return (

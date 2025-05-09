@@ -8,7 +8,7 @@ interface IProps {
 
 export interface IProductData {
   price: number;
-  status: number;
+  status?: number;
   image: string;
   name: string;
   moq: number;
