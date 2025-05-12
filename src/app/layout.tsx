@@ -1,7 +1,8 @@
-import NavBar from "@components/homePage/navBar";
+import NavBar from "@components/navBar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import MobileNav from "../components/mobileNavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,12 @@ export default function RootLayout({
         <meta property="og:url" content="https://your-product-page-link.com" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased scroll-smooth w-screen h-full bg-background flex flex-col `} >
-        <NavBar />
+        <div className="hidden lg:block">
+          <NavBar />
+        </div>
+        <div className="lg:hidden">
+          <MobileNav />
+        </div>
         <div className="mt-[4.7rem]">
           {children}
         </div>

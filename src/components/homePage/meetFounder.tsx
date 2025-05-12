@@ -12,7 +12,7 @@ const MeetFounder = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 mt-7">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 mt-7">
         <div className="place-content-center place-items-center">
           <Image
             src={Founder}
@@ -24,8 +24,8 @@ const MeetFounder = () => {
           />
         </div>
 
-        <div className="place-content-center w-10/12">
-          <h2 className="font-semibold text-4xl">
+        <div className="place-content-center max-lg:mt-2 w-10/12 max-lg:w-full">
+          <h2 className="font-semibold max-md:text-2xl text-4xl text-pretty">
             Shubham – Co-founder of Thofe Ka Theka
           </h2>
           <p className="my-4 text-base capitalize">

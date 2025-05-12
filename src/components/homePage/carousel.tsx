@@ -45,7 +45,7 @@ const DynamicCarousel = ({
     <div className="relative flex place-content-center place-items-center w-full">
       <div
         onClick={goPrev}
-        className="z-40 place-items-center w-[5%] active:scale-90 transition-all cursor-pointer"
+        className="z-40 place-items-center w-[3%] active:scale-90 transition-all cursor-pointer"
       >
         <LeftIcon />
       </div>

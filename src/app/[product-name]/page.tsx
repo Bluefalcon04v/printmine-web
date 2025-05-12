@@ -1,6 +1,4 @@
 "use client";
-import FeatureDropdown from "../all-products/components/FeatureDropdown";
-import FilterDrawer from "../all-products/components/FilterDrawer";
 import ProductCart from "../../components/homePage/productCart";
 import PackingMaterials from 'lib/packing-materials.json';
 import React, { useEffect, useState } from "react";
@@ -60,14 +58,14 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex justify-between mx-auto my-2 w-10/12">
+      {/* <div className="flex justify-between mx-auto my-2 w-10/12 max-lg:w-[95%]">
         <FilterDrawer />
         <FeatureDropdown />
-      </div>
+      </div> */}
 
-      <div className={`mx-auto w-9/12 transition-opacity ${loading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`mx-auto w-9/12 my-3 transition-opacity max-lg:w-[95%] ${loading ? 'opacity-0' : 'opacity-100'}`}>
         {matchedData?.length > 0 ? (
-          <div className="gap-8 max-md:gap-x-4 grid grid-cols-4 max-sm:grid-cols-2 max-md:grid-cols-3">
+          <div className="gap-6 max-md:gap-x-2 grid grid-cols-4 max-sm:grid-cols-2 max-lg:grid-cols-3">
             {matchedData.map((item, index) => (
               <ProductCart data={item} key={index} />
             ))}

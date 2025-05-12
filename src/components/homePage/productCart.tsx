@@ -21,9 +21,15 @@ const ProductCart = ({ data }: IProps) => {
     const phoneNumber = '7055533803';
     const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${price}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
-    window.open(whatsappUrl, "_blank"); // Open WhatsApp Web in a new tab
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) &&
+      window.innerWidth < 768;
+
+    const whatsappUrl = isMobile
+      ? `https://wa.me/91${phoneNumber}?text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=91${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -31,7 +37,7 @@ const ProductCart = ({ data }: IProps) => {
       className={`group relative hover:shadow-md p-0.5 border border-neutral-200 rounded-sm w-full transition-all cursor-pointer`}
     >
       {/* ------------------------------------------badges------------------------------------------ */}
-        {/* {status === 1 && (
+      {/* {status === 1 && (
           <div className="top-0 z-10 absolute flex bg-red-500 shadow-md shadow-red-400/30 m-1 px-3 py-1.5 rounded-sm w-fit font-sub text-white !text-base text-center leading-none group-hover:scale-125 transition-all">
             Best Seller
           </div>
@@ -44,28 +50,28 @@ const ProductCart = ({ data }: IProps) => {
 
       {/* ------------------------------------------ Images ------------------------------------------ */}
       <Image
-        alt="drive image"
         src={"https://drive.google.com/uc?export=view&id=" + image}
-        width={600}
-        height={600}
         className="rounded-sm max-h-72 transition-all"
+        alt="drive image"
+        height={600}
+        width={600}
       />
 
       {/* ------------------------------------------ Details ------------------------------------------ */}
-      <div className="flex flex-col gap-1.5 px-3 py-2">
-        <div className="flex items-center gap-1 font-sub font-semibold text-neutral-800 text-base leading-tight">
+      <div className="flex flex-col gap-1.5 px-3 max-sm:px-2 py-2">
+        <div className="flex items-center gap-1 max-md:gap-0.5 font-sub font-semibold text-neutral-800 max-sm:text-xs text-sm max-md:text-sm leading-tight">
           <p className="">
             Product Code:
-          </p> 
+          </p>
           <p className="">
             {name}
           </p>
         </div>
 
 
-        <div className="flex items-center gap-1 font-sub font-semibold text-neutral-800 text-sm leading-tight">
+        <div className="flex items-center gap-1 font-sub font-semibold text-neutral-800 max-sm:text-xs text-sm max-md:text-sm leading-tight">
           <p className="">
-            Minimum Order Quantity:
+            Min. Order Quantity:
           </p>
           <p className="">
             {moq}
