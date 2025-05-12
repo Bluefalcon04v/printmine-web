@@ -64,7 +64,7 @@ const WatchAndBuy = () => {
   return (
     <div className="my-32">
       <h3 className="font-main font-semibold text-center">Watch and Buy</h3>
-      <div className="place-items-center gap-8 grid grid-cols-6 mt-8">
+      <div className="place-items-center gap-8 grid grid-cols-6 max-lg:grid-cols-4 mt-8">
         {watchAndBuyData.map((datum, index) => (
           <div key={index}>
             <VideoCard data={datum} />
