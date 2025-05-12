@@ -18,7 +18,7 @@ const ProductCart = ({ data }: IProps) => {
   const { image, name, price, moq } = data;
 
   const sendWhatsAppMessage = () => {
-    const phoneNumber = '7055533803';
+    const phoneNumber = '9958670670';
     const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${price}`;
     const encodedMessage = encodeURIComponent(message);
 
