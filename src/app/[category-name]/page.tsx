@@ -48,6 +48,7 @@ export default function Page() {
     }, 500);
   }, [Params]);
 
+
   if (loading) {
     return (
       <div className="flex justify-center items-center w-full h-screen">

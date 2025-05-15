@@ -17,20 +17,20 @@ export interface IProductData {
 const ProductCart = ({ data }: IProps) => {
   const { image, name, price, moq } = data;
 
-  const sendWhatsAppMessage = () => {
-    const phoneNumber = '9958670670';
-    const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${price}`;
-    const encodedMessage = encodeURIComponent(message);
+  // const sendWhatsAppMessage = () => {
+  //   const phoneNumber = '9958670670';
+  //   const message = `Product Name: ${name}\nImage: ${"https://drive.google.com/uc?export=view&id=" + image}\nPrice: ₹${price}`;
+  //   const encodedMessage = encodeURIComponent(message);
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) &&
-      window.innerWidth < 768;
+  //   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) &&
+  //     window.innerWidth < 768;
 
-    const whatsappUrl = isMobile
-      ? `https://wa.me/91${phoneNumber}?text=${encodedMessage}`
-      : `https://web.whatsapp.com/send?phone=91${phoneNumber}&text=${encodedMessage}`;
+  //   const whatsappUrl = isMobile
+  //     ? `https://wa.me/91${phoneNumber}?text=${encodedMessage}`
+  //     : `https://web.whatsapp.com/send?phone=91${phoneNumber}&text=${encodedMessage}`;
 
-    window.open(whatsappUrl, "_blank");
-  };
+  //   window.open(whatsappUrl, "_blank");
+  // };
 
   return (
     <div
@@ -88,9 +88,10 @@ const ProductCart = ({ data }: IProps) => {
 
       {/* ----------------------------------- View Detail Button --------------------------------------------- */}
       <button
-        onClick={sendWhatsAppMessage} // Call the WhatsApp message function
+        // onClick={() => SendWhatsAppMessage(name, zimage, price)}
+        onClick={()=> window.location.assign("/product/"+ name )}
         className={`bg-indigo-700 py-1.5 border-2 bottom-0  transition-all hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center `}
-      >
+      > 
         Get Detail
       </button>
     </div>
