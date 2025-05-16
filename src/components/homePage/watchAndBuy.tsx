@@ -1,5 +1,5 @@
 import { PenImage, WatchBuy1, WatchBuy2, WatchBuy3, WatchBuy4, WatchBuy5 } from "@public/images";
-import { Product1Video, Product2Video, Product3Video } from "../../../public/video";
+import { Product1Video, Product2Video, Product3Video } from "@public/video";
 import VideoCard from "./videoCard";
 import React from "react";
 

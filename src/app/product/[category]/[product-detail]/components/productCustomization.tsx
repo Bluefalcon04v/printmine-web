@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 const ProductCustomization = () => {
-  const [selectShape, setSelectShape] = useState("Circle");
+  // const [selectShape, setSelectShape] = useState("Circle");
   const [selectQuantity, setSelectQuantity] = useState("10");
 
   return (

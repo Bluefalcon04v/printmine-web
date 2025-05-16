@@ -1,11 +1,11 @@
 "use client";
 import { FiHeart, FiSearch, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
+import { groupedNav } from "../constants/navbar";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { Logo } from "@public/images";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Logo } from "../../public/images";
-import { groupedNav } from "../constants/navbar";
 
 const MobileNav = () => {
     const [isOpen, setIsOpen] = useState(false);

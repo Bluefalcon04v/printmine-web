@@ -1,6 +1,6 @@
 // 
 import React from 'react'
-import { BadgesVideo, MakingVideo, PackageVideo, UsageVideo, VarietyVideo } from '../../../../../public/video'
+import { BadgesVideo, MakingVideo, PackageVideo, UsageVideo, VarietyVideo } from '@public/video'
 
 const ProductFeatures = () => {
   const PRODUCT_FEATURES_DATA = [

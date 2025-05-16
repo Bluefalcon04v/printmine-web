@@ -1,6 +1,6 @@
+import { StarSvg } from '@public/icons'
 import Image from 'next/image'
 import React from 'react'
-import { StarSvg } from '../../../public/icons'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const VideoCard = ({ data }: any) => {

@@ -1,12 +1,12 @@
 "use client";
 import { FiHeart, FiSearch, FiShoppingCart } from "react-icons/fi";
 import React, { useEffect, useRef, useState } from "react";
-import { Logo } from "../../public/images";
+import { groupedNav } from "../constants/navbar";
 import { useRouter } from "next/navigation";
+import { Logo } from "@public/images";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { groupedNav } from "../constants/navbar";
 
 const NavBar = () => {
   const router = useRouter();

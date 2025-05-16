@@ -1,23 +1,23 @@
 "use client";
-import ProductCart from "../../components/homePage/productCart";
+import ProductCart from "@components/homePage/productCart";
 import PackingMaterials from 'lib/packing-materials.json';
 import React, { useEffect, useState } from "react";
 import LaptopSleeve from 'lib/laptop-sleeve.json';
 import MobileStand from 'lib/mobile-stand.json';
 import PenKeychain from 'lib/pen-keychain.json';
 import PlasticPen from 'lib/plastic-pen.json';
-import Footer from "../../components/footer";
 import LaptopBag from 'lib/laptop-bag.json';
 import PowerBank from 'lib/power-bank.json';
 import MetalPen from 'lib/metal-pen.json';
 import Notebook from 'lib/notebook.json';
 import GiftSet from 'lib/gift-set.json';
+import Footer from "@components/footer";
 import Novelty from 'lib/novelty.json';
 import Bottle from 'lib/bottle.json';
 import Clock from 'lib/clock.json';
 
 export default function Page() {
-  const Params = window.location.pathname.split('/').pop().toLowerCase();
+  const params = window.location.pathname.split('/').pop().toLowerCase();
 
   const productDataMap = {
     bottle: Bottle,
@@ -39,15 +39,14 @@ export default function Page() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const matched = productDataMap[Params];
+    const matched = productDataMap[params];
 
     setLoading(true);
     setTimeout(() => {
       setMatchedData(matched);
       setLoading(false);
     }, 500);
-  }, [Params]);
-
+  }, [params]);
 
   if (loading) {
     return (
@@ -68,7 +67,7 @@ export default function Page() {
         {matchedData?.length > 0 ? (
           <div className="gap-6 max-md:gap-x-2 grid grid-cols-4 max-sm:grid-cols-2 max-lg:grid-cols-3">
             {matchedData.map((item, index) => (
-              <ProductCart data={item} key={index} />
+              <ProductCart data={item} key={index} category={params}/>
             ))}
           </div>
         ) : (

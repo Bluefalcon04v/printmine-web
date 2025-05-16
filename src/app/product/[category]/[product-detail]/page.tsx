@@ -1,18 +1,30 @@
 "use client";
-// import ProductCart, { IProductData } from '../../../components/homePage/productCart'
-import { Category1, Category2, Category3, Category4 } from "@public/images";
-// import DynamicCarousel from '../../../components/homePage/carousel'
-import ProductFeatures from "./components/productFeatures";
-import Reviews from "../../../components/homePage/reviews";
+// import ProductCart, { IProductData } from '@components/homePage/productCart'
+// import { Category1, Category2, Category3, Category4 } from "@public/images";
+// import DynamicCarousel from '@components/homePage/carousel'
 // import { LISTING_DATA } from '../../all-products/page'
 import ProductDetail from "./components/productDetail";
-import Footer from "../../../components/footer";
-import React, { useState } from "react";
+import { Category1 } from "@public/images";
 // import { StarSvg } from "@public/icons";
+import Footer from "@components/footer";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const Page = () => {
+  const params = window.location.pathname.split("/");
+
+  const categoryName= params[2]
+  
+  function selectedData() {
+    if(categoryName === "pen-keychain"){
+      console.log("data")
+    }
+  }
+
+  selectedData();
+
   const [mainImage, setMainImage] = useState(Category1);
+
   // const handleImageSelect = (image: string) => {
   //   setMainImage(image);
   // };
@@ -51,7 +63,7 @@ const Page = () => {
                 alt="main image"
                 height={400}
                 width={400}
-                className="py-2 pr-2 w-full max-h-[480px] object-cover"
+                className="py-2 pr-2 w-full max-h-[400px] object-fit"
               />
               {/* <div className="top-1 right-0 absolute flex gap-1 bg-red-500 shadow-md px-4 py-1 border border-white rounded-full font-sub font-semibold text-white text-sm capitalize">
                 <StarSvg className="!stroke-white" />

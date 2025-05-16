@@ -1,4 +1,4 @@
-import { Category1, Category2, Category3, Category4, Category5, Category6 } from '../../../public/images'
+import { Category1, Category2, Category3, Category4, Category5, Category6 } from '@public/images'
 import Image from 'next/image'
 import React from 'react'
 

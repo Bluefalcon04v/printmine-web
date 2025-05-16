@@ -1,12 +1,12 @@
 "use client";
 import { FaChevronDown, FaChevronRight, FaHeart } from "react-icons/fa";
-import { Product1Video } from "../../../public/video";
-import { BlogImage, PenImage, TeamImage } from "../../../public/images";
-import DynamicCarousel from "./carousel";
-import Image from "next/image";
-import React, { useState } from "react";
-import { MessageCircleMore } from "../../../public/icons";
+import { BlogImage, PenImage, TeamImage } from "@public/images";
 import { FiMessageCircle, FiSend } from "react-icons/fi";
+import { MessageCircleMore } from "@public/icons";
+import { Product1Video } from "@public/video";
+import DynamicCarousel from "./carousel";
+import React, { useState } from "react";
+import Image from "next/image";
 
 const customerReviews = [
   {

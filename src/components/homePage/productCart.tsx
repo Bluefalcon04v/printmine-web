@@ -4,6 +4,7 @@ import React from "react";
 
 interface IProps {
   data: IProductData;
+  category: string;
 }
 
 export interface IProductData {
@@ -14,7 +15,7 @@ export interface IProductData {
   moq: number;
 }
 
-const ProductCart = ({ data }: IProps) => {
+const ProductCart = ({ data, category }: IProps) => {
   const { image, name, price, moq } = data;
 
   // const sendWhatsAppMessage = () => {
@@ -60,24 +61,14 @@ const ProductCart = ({ data }: IProps) => {
       {/* ------------------------------------------ Details ------------------------------------------ */}
       <div className="flex flex-col gap-1.5 px-3 max-sm:px-2 py-2">
         <div className="flex items-center gap-1 max-md:gap-0.5 font-sub font-semibold text-neutral-800 max-sm:text-xs text-sm max-md:text-sm leading-tight">
-          <p className="">
-            Product Code:
-          </p>
-          <p className="">
-            {name}
-          </p>
+          <p className="">Product Code:</p>
+          <p className="">{name}</p>
         </div>
-
 
         <div className="flex items-center gap-1 font-sub font-semibold text-neutral-800 max-sm:text-xs text-sm max-md:text-sm leading-tight">
-          <p className="">
-            Min. Order Quantity:
-          </p>
-          <p className="">
-            {moq}
-          </p>
+          <p className="">Min. Order Quantity:</p>
+          <p className="">{moq}</p>
         </div>
-
 
         <div>
           <div className="flex items-baseline pt-1 w-full font-sub font-black text-lg line-clamp-2 leading-tight tracking-wide">
@@ -88,10 +79,9 @@ const ProductCart = ({ data }: IProps) => {
 
       {/* ----------------------------------- View Detail Button --------------------------------------------- */}
       <button
-        // onClick={() => SendWhatsAppMessage(name, zimage, price)}
-        onClick={()=> window.location.assign("/product/"+ name )}
+        onClick={() => window.location.assign("/product/" + `${category}/` + name)}
         className={`bg-indigo-700 py-1.5 border-2 bottom-0  transition-all hover:uppercase border-neutral-100 rounded-sm w-full font-semibold text-blue-100 text-center `}
-      > 
+      >
         Get Detail
       </button>
     </div>
