@@ -2,22 +2,57 @@
 // import ProductCart, { IProductData } from '@components/homePage/productCart'
 // import { Category1, Category2, Category3, Category4 } from "@public/images";
 // import DynamicCarousel from '@components/homePage/carousel'
+import PackingMaterials from 'lib/packing-materials.json';
 // import { LISTING_DATA } from '../../all-products/page'
 import ProductDetail from "./components/productDetail";
+import LaptopSleeve from 'lib/laptop-sleeve.json';
+import MobileStand from 'lib/mobile-stand.json';
+import PenKeychain from 'lib/pen-keychain.json';
+import PlasticPen from 'lib/plastic-pen.json';
+import LaptopBag from 'lib/laptop-bag.json';
+import PowerBank from 'lib/power-bank.json';
 import { Category1 } from "@public/images";
 // import { StarSvg } from "@public/icons";
+import MetalPen from 'lib/metal-pen.json';
+import Notebook from 'lib/notebook.json';
 import Footer from "@components/footer";
 import React, { useState } from "react";
+import GiftSet from 'lib/gift-set.json';
+import Novelty from 'lib/novelty.json';
+import Bottle from 'lib/bottle.json';
+import Clock from 'lib/clock.json';
 import Image from "next/image";
 
-const Page = () => {
-  const params = window.location.pathname.split("/");
 
-  const categoryName= params[2]
-  
+const Page = () => {
+  const [data, setData] = useState([])
+  const params = window.location.pathname.split("/");
+  const categoryName = params[2];
+  const productName = params[3];
+
+
+  const productDataMap = {
+    bottle: Bottle,
+    novelty: Novelty,
+    clock: Clock,
+    "gift-set": GiftSet,
+    "laptop-bag": LaptopBag,
+    "laptop-sleeve": LaptopSleeve,
+    "metal-pen": MetalPen,
+    "mobile-stand": MobileStand,
+    notebook: Notebook,
+    "packing-materials": PackingMaterials,
+    "pen-keychain": PenKeychain,
+    "plastic-pen": PlasticPen,
+    "power-bank": PowerBank,
+  };
+
   function selectedData() {
-    if(categoryName === "pen-keychain"){
-      console.log("data")
+    if (categoryName === "metal-pen") {
+      // setData(MetalPen)
+    }
+    else if( categoryName === "plastic-pen"){
+      // setData(PlasticPen)
     }
   }
 
@@ -33,10 +68,10 @@ const Page = () => {
 
   return (
     <>
-      <div className="mx-auto pt-2 w-10/12">
+      <div className="mx-auto pt-2 w-11/12 max-lg:w-[95%]">
         <div className="gap-4 grid grid-cols-2">
           {/* product images */}
-          <div className="flex bg-neutral-50 shadow border border-neutral-100 rounded-sm w-full">
+          <div className="flex bg-neutral-50 shadow border border-neutral-100 rounded-xs w-full">
             {/* Select image */}
             {/* <div className="flex flex-col gap-2 my-2 w-3/12 max-h-[400px]">
               {IMAGEDATA.map((image, index) => (
@@ -63,7 +98,7 @@ const Page = () => {
                 alt="main image"
                 height={400}
                 width={400}
-                className="py-2 pr-2 w-full max-h-[400px] object-fit"
+                className="p-2 rounded-xl w-full max-h-[400px] object-fit"
               />
               {/* <div className="top-1 right-0 absolute flex gap-1 bg-red-500 shadow-md px-4 py-1 border border-white rounded-full font-sub font-semibold text-white text-sm capitalize">
                 <StarSvg className="!stroke-white" />
@@ -73,23 +108,23 @@ const Page = () => {
           </div>
 
           {/* product details */}
-          <ProductDetail />
+          <ProductDetail productName={productName} />
         </div>
         {/* Product Features */}
         {/* <ProductFeatures /> */}
         {/* carousel */}
-        <div>
+        {/* <div>
           <p className="py-4 pt-16 font-main font-semibold text-center">
             Corporate Gift Collection
           </p>
-          {/* <DynamicCarousel
+          <DynamicCarousel
             data={LISTING_DATA}
             breakpoints={5}
             card={(LISTING_DATA: IProductData) => (
               <ProductCart data={LISTING_DATA} />
             )}
-          /> */}
-        </div>
+          />
+        </div> */}
         {/* <Reviews /> */}
       </div>
       <Footer />

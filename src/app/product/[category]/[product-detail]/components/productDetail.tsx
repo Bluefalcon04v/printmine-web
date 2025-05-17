@@ -1,21 +1,24 @@
 "use client";
+import ProductCustomization from "./productCustomization";
+import SendWhatsAppMessage from "@helper/helper";
 // import FireSvg from "@public/svg/fireSvg";
 // import CartDrawer from "./cartDrawer";
-// import { useState } from "react";
-import SendWhatsAppMessage from "@helper/helper";
-import ProductCustomization from "./productCustomization";
 import { StarSvg } from "@public/icons";
+// import { useState } from "react";
 import React from "react";
 
-const ProductDetail = () => {
-  const productCode = window.location.pathname.split("/").pop().toLowerCase();
+interface IProps {
+  productName: string;
+}
 
+const ProductDetail = ({productName}: IProps) => {
   // const [setIsCartOpen] = useState(false);
+
   return (
     <div className="flex flex-col gap-2 p-3 w-full">
       {/* heading */}
       <p className="font-sub font-semibold text-3xl text-balance leading-tight">
-        Product Code <span className="font-black uppercase">{productCode}</span>
+        Product Code <span className="font-black uppercase">{productName}</span>
       </p>
       {/* stars */}
       <div className="flex place-items-center">
@@ -26,11 +29,11 @@ const ProductDetail = () => {
           />
         ))}
         <StarSvg className="stroke-1 stroke-amber-700" />
-        <p className="ml-2 text-neutral-500 text-sm">reviews (195)</p>
+        <p className="ml-2 text-neutral-500 text-base">reviews (195)</p>
       </div>
       {/* price tag */}
       <div className="flex flex-col gap-1 my-0 font-medium">
-        <div className="flex place-items-center bg-[#cc0c39] px-2 py-1 rounded-sm w-fit font-semibold text-white text-xl 2xl">
+        <div className="flex place-items-center bg-[#cc0c39] px-2 py-1 rounded-sm w-fit font-semibold text-white text-lg">
           Limited time deal
         </div>
         <div className="flex flex-col place-items-start py-1">
@@ -58,7 +61,7 @@ const ProductDetail = () => {
       {/*Add to cart */}
       <button
         className="flex justify-center bg-black/70 active:bg-black/30 mt-2 px-12 py-2 border rounded-sm w-80 font-semibold text-white text-xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
-        onClick={() => SendWhatsAppMessage(productCode, productCode, 1)}
+        onClick={() => SendWhatsAppMessage(productName, productName, 1)}
       >
         Buy
       </button>
